@@ -1,0 +1,4 @@
+.video-preview iframe,
+.video-preview video {
+  width: 100%;
+}

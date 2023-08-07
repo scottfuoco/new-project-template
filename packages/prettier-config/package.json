@@ -1,0 +1,21 @@
+{
+  "name": "prettier-config",
+  "version": "0.0.0",
+  "private": true,
+  "main": "prettier.config.js",
+  "dependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.1.1",
+    "prettier": "^2.8.8",
+    "prettier-plugin-jsdoc": "^0.4.2",
+    "prettier-plugin-pkg": "^0.17.1",
+    "prettier-plugin-sh": "^0.12.8"
+  },
+  "devDependencies": {
+    "@types/prettier": "^2.7.2",
+    "typescript": "^5.0.4"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  }
+}

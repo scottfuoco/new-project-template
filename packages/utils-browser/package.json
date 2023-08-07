@@ -1,0 +1,55 @@
+{
+  "name": "@package/utils-shared-browser",
+  "version": "0.0.0",
+  "private": true,
+  "main": "src/index.ts",
+  "module": "src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts",
+      "require": "./src/index.ts"
+    },
+    "./abort": {
+      "types": "./src/abort.ts",
+      "import": "./src/abort.ts",
+      "require": "./src/abort.ts"
+    },
+    "./dist/*": {
+      "types": "./dist/*",
+      "import": "./dist/*",
+      "require": "./dist/*"
+    }
+  },
+  "types": "src/index.ts",
+  "scripts": {
+    "build-prod": "yarn clean && tsup --env.NODE_ENV production",
+    "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
+    "dev": "tsup --watch --env.NODE_ENV development",
+    "lint": "eslint ./src --ext .ts,.tsx",
+    "tsc": "tsc --project tsconfig.json --noEmit --skipLibCheck",
+    "watch": "tsup --watch --env.NODE_ENV development"
+  },
+  "dependencies": {
+    "@package/libs": "workspace:*",
+    "@sinclair/typebox": "^0.25.24",
+    "@sindresorhus/slugify": "^2.2.1",
+    "dayjs": "^1.11.7",
+    "got": "^12.6.0"
+  },
+  "devDependencies": {
+    "@rushstack/eslint-patch": "^1.2.0",
+    "@swc/core": "^1.3.58",
+    "@types/eslint": "^8.37.0",
+    "@types/node": "^18.16.9",
+    "@typescript-eslint/parser": "^5.59.6",
+    "are-you-es5": "^2.1.2",
+    "eslint": "^8.40.0",
+    "eslint-config-custom-server": "workspace:*",
+    "prettier-config": "workspace:*",
+    "rimraf": "^5.0.0",
+    "tsconfig": "workspace:*",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4"
+  }
+}

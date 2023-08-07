@@ -1,0 +1,27 @@
+{
+  "name": "monorepo",
+  "private": true,
+  "engines": {
+    "node": ">=20 <21"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo run lint",
+    "clean-project": "sh ./scripts/clean-project.sh"
+  },
+  "devDependencies": {
+    "eslint": "8.46.0",
+    "eslint-config-custom": "workspace:*",
+    "prettier": "^3.0.0",
+    "prettier-config": "workspace:*",
+    "tsx": "^3.12.7",
+    "turbo": "^1.10.12"
+  },
+  "packageManager": "pnpm@8.6.11",
+  "volta": {
+    "node": "20.5.0",
+    "pnpm": "8.6.11"
+  }
+}

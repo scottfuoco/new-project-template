@@ -1,0 +1,16 @@
+*
+!packages/*/src
+!apps/*/src
+lib
+docs
+documentation
+node_modules
+.cache
+.turbo
+.next
+dist
+.dist
+build
+.build
+.git
+.yarn
